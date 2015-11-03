@@ -8,7 +8,7 @@ namespace Practice
 {
     class Caps
     {
-        public static void Main(string[] args)
+        public static void main(string[] args)
         {
             String input = Console.ReadLine() + " ";
             String rev = "";
