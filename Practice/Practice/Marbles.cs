@@ -46,7 +46,8 @@ namespace Practice
             //int white = black - (numerator - 1);
             int n = 2;
 
-            while (true)
+            bool found = false;
+            while (!found)
             {
                 for (int k = 1; k < n; k++ )
                 {
@@ -60,7 +61,8 @@ namespace Practice
                     if (num == numerator && den == denominator)
                     {
                         Console.WriteLine(k + " black and " + (n - k) + " white");
-                        break; // my nigga
+                        found = true;
+                        break;
                     }
                 }
                 n++;
