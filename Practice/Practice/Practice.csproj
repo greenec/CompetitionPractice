@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="BoGo.cs" />
     <Compile Include="Caps.cs" />
+    <Compile Include="Marbles.cs" />
     <Compile Include="Enemies.cs" />
     <Compile Include="Pacer.cs" />
     <Compile Include="Pasta.cs" />

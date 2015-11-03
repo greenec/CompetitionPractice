@@ -39,7 +39,7 @@ namespace Practice
 
     class Sight
     {
-        public static void Main(string[] args)
+        public static void main(string[] args)
         {
             List<Point> points = new List<Point>();
             List<Point> output = new List<Point>();
