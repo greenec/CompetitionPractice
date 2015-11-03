@@ -28,7 +28,7 @@ namespace Practice
             Console.Write("Numerator and denominator: ");
             //int numerator = Convert.ToInt32(input.Substring(0, input.IndexOf(" ")));
             //int denominator = Convert.ToInt32(input.Substring(input.IndexOf(" ")));
-            int[] input = Console.ReadLine().Split(' ').ToList().Select(n => Convert.ToInt32(n)).ToArray();
+            int[] input = Console.ReadLine().Split(' ').ToList().Select(n2 => Convert.ToInt32(n2)).ToArray();
             int numerator = input[0], denominator = input[1];
 
             int gcf1 = getGCF(numerator, denominator);
@@ -44,11 +44,11 @@ namespace Practice
 
             //int black = (numerator - 1) / (denominator - 1);
             //int white = black - (numerator - 1);
-            int k = 2;
+            int n = 2;
 
             while (true)
             {
-                for (int n = 2; n < 1000; n++ )
+                for (int k = 1; k < n; k++ )
                 {
                     int num = k * k - k;
                     int den = n * n - n;
@@ -58,9 +58,12 @@ namespace Practice
                     den /= gcf;
 
                     if (num == numerator && den == denominator)
+                    {
                         Console.WriteLine(k + " black and " + (n - k) + " white");
+                        break; // my nigga
+                    }
                 }
-                k++;
+                n++;
             }
 
             //Console.WriteLine(black);
