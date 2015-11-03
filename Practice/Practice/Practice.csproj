@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BoGo.cs" />
     <Compile Include="Enemies.cs" />
+    <Compile Include="Pacer.cs" />
     <Compile Include="Pasta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

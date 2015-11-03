@@ -8,7 +8,7 @@ namespace Practice
 {
     class Enemies
     {
-        public static void Main(string[] args)
+        public static void main(string[] args)
         {
 
             int count = 0;
