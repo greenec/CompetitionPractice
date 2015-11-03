@@ -8,7 +8,7 @@ namespace Practice
 {
     class Pacer
     {
-        public static void Main(string[] args)
+        public static void main(string[] args)
         {
             Console.Write("Interval distance in meters: ");
             int meters = Convert.ToInt32(Console.ReadLine());

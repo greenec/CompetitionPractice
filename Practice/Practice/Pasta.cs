@@ -15,7 +15,6 @@ namespace Practice
 
             String output = Regex.Replace(input, "(a|e|i|o|u)+([a-z])", "a$2");
 
-
             Console.WriteLine(output);
 
             Console.ReadLine();
