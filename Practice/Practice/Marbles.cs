@@ -23,7 +23,7 @@ namespace Practice
             return 1;
         }
 
-        public static void Main(string[] args)
+        public static void main(string[] args)
         {
             Console.Write("Numerator and denominator: ");
             //int numerator = Convert.ToInt32(input.Substring(0, input.IndexOf(" ")));
@@ -36,20 +36,19 @@ namespace Practice
             denominator /= gcf1;
 
             // Find some k, n such that
+            //
             // k^2 - k
             // -------
             // n^2 - n
             //
             // can be reduced to numerator / denominator
 
-            //int black = (numerator - 1) / (denominator - 1);
-            //int white = black - (numerator - 1);
             int n = 2;
 
             bool found = false;
             while (!found)
             {
-                for (int k = 1; k < n; k++ )
+                for (int k = 1; k < n; k++)
                 {
                     int num = k * k - k;
                     int den = n * n - n;
