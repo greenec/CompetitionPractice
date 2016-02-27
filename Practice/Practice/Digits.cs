@@ -14,6 +14,8 @@ namespace Digits
             List<int> digits = new List<int>();
             List<int> remainders = new List<int>();
 
+            remainders.Add(1);
+
             Console.Write("Enter a positive integer: ");
             int input = Convert.ToInt32(Console.ReadLine());
 
@@ -21,32 +23,38 @@ namespace Digits
             {
                 remainder *= 10;
 
+                digits.Add(remainder / input);
+                remainder = remainder % input;
+
                 if (remainder == 0)
                 {
                     Console.Write("0.");
-                    printList(digits);
+                    for (int i = 0; i < digits.Count; i++)
+                    {
+                        Console.Write(digits[i]);
+                    }
                     Console.Read();
                     break;
                 }
 
-                if (remainders.Contains(remainder % input))
+                if (remainders.Contains(remainder))
                 {
-                    Console.Write("0.[");
-                    printList(digits);
+                    int index = remainders.IndexOf(remainder);
+                    Console.Write("0.");
+                    for (int i = 0; i < index; i++)
+                    {
+                        Console.Write(digits[i]);
+                    }
+                    Console.Write("[");
+                    for (int i = index; i < digits.Count; i++)
+                    {
+                        Console.Write(digits[i]);
+                    }
                     Console.Write("]");
                     Console.Read();
                     break;
                 }
-                digits.Add(remainder / input);
-                remainder = remainder % input;
                 remainders.Add(remainder);
-            }
-        }
-        static void printList(List<int> list)
-        {
-            for (int i = 0; i < list.Count; i++)
-            {
-                Console.Write(list[i]);
             }
         }
     }
