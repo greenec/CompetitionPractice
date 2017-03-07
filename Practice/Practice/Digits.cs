@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Digits
 {
-    class Program
+    class Digits
     {
-        static void Main(string[] args)
+        static void main(string[] args)
         {
             int remainder = 1;
             List<int> digits = new List<int>();
